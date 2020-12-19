@@ -29,12 +29,17 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 #gem 'bootstrap-sass'
-gem 'bootstrap', '~> 4.0.0'
-gem 'mini_racer'
+gem 'bootstrap', '~> 5.0.0.alpha3'
+#gem 'mini_racer'
 
 gem 'will_paginate', '3.1.7'
 gem 'bootstrap-will_paginate'
 
+gem 'jquery-rails'
+
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 
 group :development, :test do

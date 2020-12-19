@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_16_145122) do
+ActiveRecord::Schema.define(version: 2020_12_19_073001) do
 
   create_table "boards", force: :cascade do |t|
     t.integer "category_id", null: false
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2020_12_16_145122) do
     t.string "deadline"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "picture"
     t.index ["category_id"], name: "index_boards_on_category_id"
   end
 
