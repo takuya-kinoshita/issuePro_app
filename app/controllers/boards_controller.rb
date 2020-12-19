@@ -10,10 +10,10 @@ class BoardsController < ApplicationController
   end
 
   def create
-    #binding.pry
+
     @board = Board.create(board_params)
     @board.save
-    #binding.pry
+    #debugger
     redirect_to "/boards"
   end
 
@@ -32,6 +32,7 @@ class BoardsController < ApplicationController
     @board.title = params[:title]
     @board.body = params[:body]
     @board.deadline = params[:deadline]
+
 
     if @board.update(board_params)
       flash[:notice] = "success editing"
