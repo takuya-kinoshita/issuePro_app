@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: one
+  name: MyString
+  title: MyString
+  responsible: MyString
+  body: MyText
+  deadline: MyString
+
+two:
+  category: two
+  name: MyString
+  title: MyString
+  responsible: MyString
+  body: MyText
+  deadline: MyString

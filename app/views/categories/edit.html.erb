@@ -1,0 +1,19 @@
+<div class="d-flex align-items-center">
+  <h1>Category編集</h1>
+  <div class="ml-auto boards__linkBox">
+    <%= link_to "Category一覧", categories_path, class:"btn btn-outline-dark" %>
+  </div>
+</div>
+
+<%= form_for @category do |f| %>
+  <div class="form-group" >
+    <%= f.label :name, "カテゴリ名" %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <%= f.submit "保存", class: "btn btn-primary" %>
+
+<% end %>
+
+<%= link_to "delete", @category, method: :delete, data: {confirm: "削除しますか？"}, \
+     class:"btn btn-outline-dark" %>

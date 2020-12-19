@@ -28,10 +28,11 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-gem 'bootstrap'
+#gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.0.0'
 gem 'mini_racer'
 
-gem 'will_paginate'
+gem 'will_paginate', '3.1.7'
 gem 'bootstrap-will_paginate'
 
 
