@@ -7,9 +7,8 @@
 <%= form_for @board do |f| %>
   <div class="form-group" >
     <%= f.label :category_id, "Category No." %>
-    <%= f.text_field :category_id, class: "form-control" %>
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
   </div>
-
 
   <div class="form-group" >
     <%= f.label :name, "部品名" %>
