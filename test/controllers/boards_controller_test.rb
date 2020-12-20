@@ -2,22 +2,22 @@ require 'test_helper'
 
 class BoardsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get boards_index_url
+    get boards_path
     assert_response :success
   end
 
   test "should get new" do
-    get boards_new_url
+    get new_board_path
     assert_response :success
   end
 
   test "should get edit" do
-    get boards_edit_url
+    get edit_board_path(boards(:one))
     assert_response :success
   end
 
   test "should get show" do
-    get boards_show_url
+    get board_path(boards(:one))
     assert_response :success
   end
 

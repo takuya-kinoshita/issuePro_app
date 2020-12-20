@@ -1,6 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   category: one
   name: MyString
   title: MyString
@@ -9,6 +10,7 @@ one:
   deadline: MyString
 
 two:
+  id: 2
   category: two
   name: MyString
   title: MyString
