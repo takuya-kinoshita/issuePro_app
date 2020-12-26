@@ -29,8 +29,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 #gem 'bootstrap-sass'
-gem 'bootstrap', '~> 5.0.0.alpha3'
-#gem 'mini_racer'
+gem 'bootstrap'
+gem 'mini_racer'
 
 gem 'will_paginate', '3.1.7'
 gem 'bootstrap-will_paginate'

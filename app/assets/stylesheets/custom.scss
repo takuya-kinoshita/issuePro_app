@@ -1,0 +1,40 @@
+@import "bootstrap";
+
+header{
+  height: 20px;
+}
+
+
+body{
+  padding-top: 60px;
+}
+
+.btn{
+  float: right;
+}
+
+/* header */
+
+#logo{
+  float: left;
+  color: black;
+  font-weight: bold;
+  padding-top: 0px;
+  font-size: 24px;
+}
+
+/* footer */
+
+footer{
+  border-top: solid 2px;
+  margin-top: 40px;
+  text-align: center;
+  height: 50px;
+  color: cadetblue;
+}
+
+footer li{
+  list-style: none;
+  float: right;
+  margin-right: 10px;
+}
