@@ -19,6 +19,7 @@ class BoardsController < ApplicationController
 
   def show
     @board = Board.find(params[:id])
+
   end
 
   def edit
@@ -55,7 +56,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:name, :title, :body, :responsible, :deadline, :category_id, :picture)
+    params.require(:board).permit(:name, :title, :body, :responsible, :deadline, :category_id, :picture, :progress)
   end
 
 

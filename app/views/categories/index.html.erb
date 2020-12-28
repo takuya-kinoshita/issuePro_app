@@ -1,7 +1,7 @@
 <div class="d-flex align-items-center">
   <h1>Category一覧</h1>
   <div class="ml-auto boards__linkBox">
-    <%= link_to "新規作成", new_category_path, class:"btn btn-primary" %>
+    <%= link_to "Category新規作成", new_category_path, class:"btn btn-primary" %>
   </div>
 
   <div class="ml-auto boards__linkBox">
@@ -14,7 +14,7 @@
 
 <div class="categories">
   <% @categories.each do |category| %>
-    <div class="btn btn-outline-dark">
+    <div class="btn btn-default btn-block">
     <h2><%= link_to "#{category.id}:#{category.name}", "/categories/#{category.id}" %></h2>
     </div>
   <% end %>
