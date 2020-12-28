@@ -8,7 +8,7 @@
 
 if Rails.env.development?
   (1..20).each do |s|
-    Board.create(name: "board #{s}", title: "title #{s}", body: "body #{s}")
+    Board.create(category_id: 1, name: "board #{s}", title: "title #{s}", body: "body #{s}")
   end
 
 end

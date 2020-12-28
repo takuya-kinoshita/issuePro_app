@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
   def index
-    @boards = Board.paginate(page: params[:page], per_page: 5)
+    @boards = Board.paginate(page: params[:page], per_page: 20)
 
   end
 
