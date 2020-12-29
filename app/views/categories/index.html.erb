@@ -1,23 +1,26 @@
 <div class="d-flex align-items-center container">
   <h1>Category一覧</h1>
   <div class="ml-auto boards__linkBox">
-    <%= link_to "Category新規作成", new_category_path, class:"btn btn-primary" %>
+    <%= link_to "Category新規作成", new_category_path, class:"btn btn-top btn-primary" %>
   </div>
 
   <div class="ml-auto boards__linkBox">
-    <%= link_to "課題一覧", boards_path, class:"btn btn-primary" %>
+    <%= link_to "課題一覧", boards_path, class:"btn btn-top btn-primary" %>
   </div>
+
+
+
 </div>
 
-
-<%#= will_paginate :renderer => WillPaginate::ActionView::LinkRenderer %>
 
 <div class="categories container">
   <% @categories.each do |category| %>
-    <div class="btn btn-success btn-block">
-    <h2><%= link_to "#{category.id}:#{category.name}", "/categories/#{category.id}" %></h2>
+    <div class="btn btn-default btn-block">
+    <h2><%= link_to "#{category.name}", "/categories/#{category.id}" %></h2>
     </div>
   <% end %>
-</div>
 
-<%= will_paginate :renderer => WillPaginate::ActionView::LinkRenderer %>
+
+<%= will_paginate %>
+
+</div>

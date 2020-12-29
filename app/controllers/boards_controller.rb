@@ -12,9 +12,15 @@ class BoardsController < ApplicationController
   def create
 
     @board = Board.create(board_params)
-    @board.save
+    if @board.save
     #debugger
-    redirect_to "/boards"
+       flash[:success] = "課題を作成しました"
+       redirect_to @board
+    else
+       flash.now[:danger] = "保存に失敗しました"
+       render 'new'
+     end
+
   end
 
   def show
@@ -36,8 +42,8 @@ class BoardsController < ApplicationController
 
 
     if @board.update(board_params)
-      flash[:notice] = "success editing"
-      redirect_to boards_path
+      flash[:success] = "編集しました"
+      redirect_to board_path
     else
       render "edit"
     end
@@ -47,7 +53,7 @@ class BoardsController < ApplicationController
   def destroy
     @board = Board.find(params[:id])
     if @board.destroy
-      flash[:notice] = "contents deleted"
+      flash[:danger] = "削除しました"
       redirect_to boards_path
     end
   end

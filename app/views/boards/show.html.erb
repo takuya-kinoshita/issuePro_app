@@ -1,3 +1,5 @@
+
+
 <div class="container mt-4 md-4">
   <div class="ml-auto board__linkbox">
     <h1>課題詳細</h1>
@@ -9,12 +11,14 @@
 </div>
 
 
+
 <div class ="panel panel-primary container">
   <div class="panel-heading">
     <h4>課題：<%= simple_format(@board.title) %></h4>
   </div>
 
   <div class="panel">
+    <p class="title"> 対策:  <%= @board.category.name %></p>
     <p class="title">対策:</p>
     <p class="card-text"><%= simple_format(@board.body) %></p>
     <p class="title">部品名:</p>

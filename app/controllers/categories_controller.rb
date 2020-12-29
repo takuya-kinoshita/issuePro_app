@@ -33,7 +33,7 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     #debugger
-    @boards = @category.boards.paginate(page: params[:page], per_page: 5)
+    @boards = @category.boards.paginate(page: params[:page], per_page: 20)
     #debugger
   end
 

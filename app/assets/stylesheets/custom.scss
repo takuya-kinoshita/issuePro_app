@@ -7,9 +7,15 @@ body{
   padding-top: 60px;
 }
 
-.btn{
+.btn-top{
   float: right;
-  margin: 0px 5px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.btn-center{
+  float: center;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -71,4 +77,23 @@ footer li{
   font-size: 16px;
   margin-top: 10px;
   padding-top: 10px;
+}
+
+.btn-success{
+  color: white;
+}
+
+
+
+/* form */
+
+.form-progress{
+  whidth: 30%;
+}
+
+
+/* errors */
+
+#error_explanation{
+  color: red;
 }
