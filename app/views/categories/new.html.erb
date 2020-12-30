@@ -1,9 +1,10 @@
-<div class="d-flex align-items-center">
+<div class="d-flex align-items-center container">
   <h1>Category新規作成</h1>
   <div class="ml-auto boards__linkBox">
-    <%= link_to "Category一覧",categories_path , class:"btn btn-outline-dark" %>
+    <%= link_to "Category一覧",categories_path , class:"btn btn-primary" %>
   </div>
-</div>
+
+
 <%= form_for @category do |f| %>
   <div class="form-group" >
     <%= f.label :name, "Category名" %>
@@ -13,3 +14,5 @@
   <%= f.submit "保存", class: "btn btn-primary" %>
 
 <% end %>
+
+</div>
