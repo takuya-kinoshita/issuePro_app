@@ -9,6 +9,8 @@ class BoardsController < ApplicationController
 
   end
 
+
+
   def create
 
     @board = Board.create(board_params)
@@ -25,7 +27,7 @@ class BoardsController < ApplicationController
 
   def show
     @board = Board.find(params[:id])
-
+    @comments = @board.comments.paginate(page: params[:page])
   end
 
   def edit

@@ -41,5 +41,31 @@
   <div class="container border border-primary">
     <%= image_tag @board.picture.url if @board.picture? %>
   </div>
+</div>
 
+<div class="panel">
+  <% if @board.comments.any? %>
+  <h3>Comments(<%= @board.comments.count %>)</h3>
+  <ol class="comments">
+    <%= render @comments %>
+  </ol>
+  <%= will_paginate @comments %>
+<% end %>
+</div>
+
+<%#= link_to "Post a comment", comments_new_path, class:"btn btn-default" %>
+
+<div class="container">
+<%= form_with(model: @comment, local: true) do |f| %>
+  <%#= render 'shared/errors_messages', object: f.object %>
+
+  <div class="field">
+    <%= f.text_field :name, placeholder: "Enter your name...", style: "width: 30%;" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Compose new comment..." %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
 </div>
