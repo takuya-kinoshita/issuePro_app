@@ -12,11 +12,11 @@
     <%= f.text_field :name, class: "form-control" %>
   </div>
 
-  <%= f.submit "保存", class: "btn btn-primary" %>
+  <%= f.submit "保存", class: "btn btn-top btn-primary" %>
 
 <% end %>
 
 <%= link_to "delete", @category, method: :delete, data: {confirm: "削除しますか？"}, \
-     class:"btn btn-danger" %>
+     class:"btn btn-top btn-danger" %>
 
 </div>

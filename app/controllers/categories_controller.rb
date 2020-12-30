@@ -40,6 +40,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     if @category.destroy
+      flash[:danger] = "カテゴリーを削除しました"
       redirect_to categories_path
     else
       render "edit"
