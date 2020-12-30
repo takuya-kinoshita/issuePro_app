@@ -4,4 +4,6 @@
   <span class="timestamp">
     Posted <%= time_ago_in_words(comment.created_at) %> ago.
   </span>
+  <%= link_to "delete", comment, method: :delete, data: {confirm: "削除しますか？"}, \
+       class:"btn btn-top btn-danger" %>
 </li>

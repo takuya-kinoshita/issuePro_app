@@ -1,11 +1,13 @@
 class CommentsController < ApplicationController
 
   def show
+
   end
 
   def create
     #debugger
     @board = Board.find(params[:id])
+    #debugger
     @comment = @board.comments.build(comment_params)
     if @comment.save
       flash[:success] = "コメントしました"
@@ -17,6 +19,13 @@ class CommentsController < ApplicationController
   end
 
   def edit
+  end
+
+  def destroy
+      comment = Comment.find(params[:id])
+      comment.delete
+      flash[:success] = "コメントを削除しました"
+      redirect_to comment.board
   end
 
   private
