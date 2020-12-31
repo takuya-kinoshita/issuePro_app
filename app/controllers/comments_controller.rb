@@ -5,16 +5,15 @@ class CommentsController < ApplicationController
   end
 
   def create
-    #debugger
+
     @board = Board.find(params[:id])
-    #debugger
     @comment = @board.comments.build(comment_params)
     if @comment.save
       flash[:success] = "コメントしました"
       redirect_to @board
     else
-      flash.now[:danger] = "コメントに失敗しました"
-      render @board
+      flash[:danger] = "コメントに失敗しました"
+      redirect_to @board
     end
   end
 
