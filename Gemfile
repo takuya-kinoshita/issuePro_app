@@ -40,7 +40,7 @@ gem 'jquery-rails'
 
 gem 'carrierwave'
 gem 'mini_magick'
-#gem 'fog'
+gem 'fog'
 
 gem 'aws-sdk-s3', '1.46.0', require: false
 
