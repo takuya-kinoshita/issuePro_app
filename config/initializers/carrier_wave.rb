@@ -1,4 +1,5 @@
 if Rails.env.production?
+  s3 = Fog::Storage.new(provider: 'AWS', region: 'ap-northeast-1')
   CarrierWave.configure do |config|
     config.fog_provider = 'fog/aws'
     config.fog_credentials = {
