@@ -45,7 +45,7 @@ gem 'mini_magick'
 gem 'fog'
 gem 'fog-aws'
 gem 'aws-sdk-s3', '1.46.0', require: false
-gem 'nokogiri'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -73,10 +73,10 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 
-#  gem 'minitest'
-#  gem 'minitest-reporters'
-#  gem 'guard'
-#  gem 'guard-minitest'
+  gem 'minitest'
+  gem 'minitest-reporters'
+  gem 'guard'
+  gem 'guard-minitest'
 end
 
 group :production do
