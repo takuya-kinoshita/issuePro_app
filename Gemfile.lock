@@ -338,15 +338,13 @@ GEM
     mime-types-data (3.2021.0225)
     mini_magick (4.11.0)
     mini_mime (1.0.3)
-    mini_portile2 (2.5.0)
     minitest (5.14.4)
     msgpack (1.4.2)
     multi_json (1.15.0)
     multipart-post (2.1.1)
     netrc (0.11.0)
     nio4r (2.5.7)
-    nokogiri (1.11.2)
-      mini_portile2 (~> 2.5.0)
+    nokogiri (1.11.2-x86_64-darwin)
       racc (~> 1.4)
     optimist (3.0.1)
     os (1.1.1)
@@ -481,7 +479,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  ruby
+  x86_64-darwin-19
 
 DEPENDENCIES
   aws-sdk-s3 (= 1.46.0)
@@ -518,4 +516,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.2.15
+   2.2.11
